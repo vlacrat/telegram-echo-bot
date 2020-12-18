@@ -8,6 +8,13 @@ bot.start(ctx => {
     'Hello it\'s echo bot!!!'
   )
 })
+
+bot.help(ctx => {
+  ctx.reply(`
+    Send any message and i will copy it
+  `)
+})
+
 bot.launch().then(res => {
   console.log('Started...')
 }).catch(err => {
