@@ -15,6 +15,10 @@ bot.help(ctx => {
   `)
 })
 
+bot.on('message', (ctx) => {
+  ctx.telegram.sendCopy(ctx.chat.id, ctx.message)
+})
+
 bot.launch().then(res => {
   console.log('Started...')
 }).catch(err => {
